@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'blog_home'
 
-LOGIN URL = 'login'
+LOGIN_URL = 'login'
 
 
 # Activate Django-Heroku.
