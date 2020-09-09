@@ -2,7 +2,10 @@
 
 <!-- Blog Entries Column -->
 <div class="col-md-8">
+    <br />
     <a href="{% url 'blog_home' %}">Back to Home</a>
+    <br />
+    <br />
     <!-- Blog Post -->
     <div class="card mb-4">
         <div class="card-body">
@@ -11,7 +14,8 @@
         </div>
         <div class="card-footer text-muted">
             Posted on {{ object.entry_date }} by
-            <span class="text-info mr-2">{{ object.entry_author }}</span>
+            <strong>{{ entry.entry_author }}</strong> -
+            <a href="{% url 'update_entry' entry.pk %}">Edit</a>
         </div>
     </div>
 </div>

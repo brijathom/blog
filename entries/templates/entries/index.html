@@ -14,7 +14,8 @@
         </div>
         <div class="card-footer text-muted">
             Posted on {{ entry.entry_date }} by
-            <a href="#">{{ entry.entry_author }}</a>
+            <strong>{{ entry.entry_author }}</strong> -
+            <a href="{% url 'update_entry' entry.pk %}">Edit</a>
         </div>
     </div>
     {% endfor %} {% if is_paginated %}
