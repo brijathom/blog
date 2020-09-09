@@ -14,8 +14,10 @@
         </div>
         <div class="card-footer text-muted">
             Posted on {{ object.entry_date }} by
-            <strong>{{ entry.entry_author }}</strong> - <a href="{% url 'update_entry' entry.pk %}">Edit</a> -
+            <strong>{{ entry.entry_author }}</strong>
+            {% if user.is_authenticated %} - <a href="{% url 'update_entry' entry.pk %}">Edit</a> -
             <a href="{% url 'delete_entry' entry.pk %}">Delete</a>
+            {% endif %}
         </div>
     </div>
 </div>

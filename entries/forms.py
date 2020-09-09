@@ -5,7 +5,6 @@ from .models import Entry
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry
-        # fields = ("entry_title", "entry_text", "entry_date", "entry_author")
         fields = ("entry_title", "entry_text")
 
         widgets = {

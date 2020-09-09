@@ -10,5 +10,4 @@ urlpatterns = [
          UpdateEntryView.as_view(success_url='/'), name='update_entry'),
     path('entry/<int:pk>/delete/',
          DeleteEntryView.as_view(success_url='/'), name='delete_entry'),
-
 ]

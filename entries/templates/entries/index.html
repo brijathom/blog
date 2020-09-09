@@ -2,7 +2,7 @@
 
 <!-- Blog Entries Column -->
 <div class="col-md-8">
-    <h2 class="my-4">Posts</h2>
+    <h1 class="my-4">Posts</h1>
 
     {% for entry in blog_entries %}
     <!-- Blog Post -->
@@ -14,8 +14,10 @@
         </div>
         <div class="card-footer text-muted">
             Posted on {{ entry.entry_date }} by
-            <strong>{{ entry.entry_author }}</strong> - <a href="{% url 'update_entry' entry.pk %}">Edit</a> -
+            <strong>{{ entry.entry_author }}</strong>
+            {% if user.is_authenticated %} - <a href="{% url 'update_entry' entry.pk %}">Edit</a> -
             <a href="{% url 'delete_entry' entry.pk %}">Delete</a>
+            {% endif %}
         </div>
     </div>
     {% endfor %} {% if is_paginated %}
