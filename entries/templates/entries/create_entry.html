@@ -2,14 +2,15 @@
 
 <div class="col-md-8">
     <h1 class="my-4">Create Blog Post</h1>
-
     <div class="card mb-4">
         <!-- <div class="card-header"></div> -->
         <div class="card-body">
-            <form method="POST">
-                {% csrf_token %} {{form.as_p}}
-                <button type="submit" class="btn btn-secondary">Post Entry</button>
-            </form>
+            <div class="form-group">
+                <form method="POST">
+                    {% csrf_token %} {{form.as_p}}
+                    <button type="submit" class="btn btn-secondary">Post Entry</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
