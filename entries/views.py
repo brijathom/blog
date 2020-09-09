@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Entry
 from .forms import EntryForm
 
@@ -33,7 +33,6 @@ class UpdateEntryView(UpdateView):
     template_name = 'entries/update_entry.html'
 
 
-class DeleteEntryView(UpdateView):
+class DeleteEntryView(DeleteView):
     model = Entry
-    form_class = EntryForm
-    template_name = 'entries/update_entry.html'
+    template_name = 'entries/delete_entry.html'
