@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '03cc5s*79+sh2p60%sw*#o*t4s*$goc3q#l+(e^xz=vx&w=eth'
-SECRET_KEY = os.environ.get('BLOG_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blog-app-bt.herokuapp.com']
 
 
 # Application definition
