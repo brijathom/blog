@@ -27,7 +27,8 @@ SECRET_KEY = os.environ.get('BLOG_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = ['blog-app-bt.herokuapp.com']
+# The allowed hosts are set.
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'blog-app-bt.herokuapp.com']
 
 
 # Application definition
