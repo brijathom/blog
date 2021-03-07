@@ -16,6 +16,10 @@
 
         <!-- Custom styles for this template -->
         <link href="{%  static 'entries/css/blog-home.css' %}" rel="stylesheet" />
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="{%  static 'entries/vendor/jquery/jquery.min.js' %}" defer></script>
+        <script src="{%  static 'entries/vendor/bootstrap/js/bootstrap.bundle.min.js' %}" defer></script>
     </head>
 
     <body>
@@ -79,9 +83,5 @@
         <div class="container">
             <div class="row">{% block content %} {% endblock %}</div>
         </div>
-
-        <!-- Bootstrap core JavaScript -->
-        <script src="{%  static 'entries/vendor/jquery/jquery.min.js' %}"></script>
-        <script src="{%  static 'entries/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     </body>
 </html>
