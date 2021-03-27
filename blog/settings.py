@@ -131,10 +131,6 @@ LOGIN_REDIRECT_URL = 'blog_home'
 
 LOGOUT_REDIRECT_URL = 'blog_home'
 
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-
 # The settings for the CKEditor Rich Text fields.
 CKEDITOR_CONFIGS = {
     'default': {
@@ -156,3 +152,6 @@ CKEDITOR_CONFIGS = {
         'contentsCss': ['body{font-size: 1rem;}', 'body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;}', ],
     },
 }
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
