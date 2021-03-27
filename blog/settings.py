@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = os.environ.get('BLOG_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # The allowed hosts are set.
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'blog-app-bt.herokuapp.com']
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,25 @@ LOGOUT_REDIRECT_URL = 'blog_home'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+# The settings for the CKEditor Rich Text fields.
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar_Full': [
+            ['Styles'],
+            ['Format'],
+            ['Bold', 'Italic', 'Underline'],
+            ['Undo', 'Redo'],
+            ['NumberedList', 'BulletedList'],
+            ['Indent'],
+            ['Scayt'],
+            ['Link', 'Unlink'],
+            ['Image'],
+            ['SpecialChar'],
+
+        ],
+        'extraPlugins': 'indent, scayt',
+        'width': '100%',
+        'contentsCss': ['body{font-size: 1rem;}', 'body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;}', ],
+    },
+}

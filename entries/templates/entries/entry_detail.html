@@ -6,7 +6,7 @@
     <!-- Blog Post -->
     <div class="card mb-4">
         <div class="card-body">
-            <p class="card-text">{{ object.entry_text|linebreaks }}</p>
+            <p class="card-text">{{ object.entry_text| safe }}</p>
         </div>
         <div class="card-footer text-muted">
             <strong>{{ entry.entry_author }}</strong>

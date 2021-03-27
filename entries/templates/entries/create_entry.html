@@ -1,5 +1,15 @@
 {% extends "entries/base.html" %} {% block content %}
 
+<style>
+    .django-ckeditor-widget {
+        width: 100%;
+    }
+
+    .cke_editable {
+        font-size: 1rem;
+    }
+</style>
+
 <div class="col-md-12">
     {% if user.is_authenticated %}
     <h1 class="my-4">Create Blog Post</h1>
@@ -7,7 +17,7 @@
         <div class="card-body">
             <div class="form-group">
                 <form method="POST">
-                    {% csrf_token %} {{form.as_p}}
+                    {% csrf_token %} {{form.media}} {{form.as_p}}
                     <button type="submit" class="btn btn-secondary">Post Entry</button>
                 </form>
             </div>
