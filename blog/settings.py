@@ -140,7 +140,7 @@ CKEDITOR_CONFIGS = {
             ['Bold', 'Italic', 'Underline'],
             ['Undo', 'Redo'],
             ['NumberedList', 'BulletedList'],
-            ['Indent'],
+            ['Outdent', 'Indent'],
             ['Scayt'],
             ['Link', 'Unlink'],
             ['Image'],
