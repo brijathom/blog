@@ -1,8 +1,14 @@
 {% extends "entries/base.html" %} {% block content %}
 
+<style>
+    .card-button {
+        margin-bottom: 0rem;
+    }
+</style>
+
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-    <h1 class="my-2">All Entries</h1>
+    <h1 class="my-4">All Entries</h1>
 
     {% for entry in blog_entries %}
     <!-- Blog Entry -->
@@ -10,7 +16,7 @@
         <div class="card-body">
             <h2 class="card-title">{{ entry.entry_title }}</h2>
             <p class="card-text">{{ entry.entry_text|truncatechars:100|safe }}</p>
-            <p>
+            <p class="card-button">
                 <a href="{% url 'entry_detail' entry.pk %}" class="btn btn-dark">Read More &rarr;</a>
             </p>
         </div>

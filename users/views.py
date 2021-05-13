@@ -18,7 +18,7 @@ def register(request):
         form = RegistrationForm()
 
     context = {'form': form}
-    return render(request, 'users/register.html', context)
+    return render(request, 'users/register_account.html', context)
 
 
 def delete(request):
@@ -35,4 +35,4 @@ def delete(request):
 
     context = {'form': form}
 
-    return render(request, 'users/delete.html', context)
+    return render(request, 'users/delete_account.html', context)

@@ -24,8 +24,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('BLOG_KEY')
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # The allowed hosts are set.
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'blog-app-bt.herokuapp.com']
