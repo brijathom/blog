@@ -8,6 +8,6 @@ class EntryForm(forms.ModelForm):
         fields = ("entry_title", "entry_text")
 
         widgets = {
-            "entry_title": forms.TextInput(attrs={"class": "form-control"}),
+            "entry_title": forms.TextInput(attrs={"class": "form-control", 'autofocus': 'autofocus'}),
             "entry_text": forms.Textarea(attrs={"class": "form-control"}),
         }
