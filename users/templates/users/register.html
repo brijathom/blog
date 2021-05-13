@@ -13,13 +13,13 @@
 </style>
 
 <div class="col-md-8">
-    <h1 class="my-4">Register a New Account</h1>
+    <h1 class="my-4">Register Account</h1>
     <div class="card mb-4">
         <div class="card-body">
             <div class="form-group">
                 <form method="POST">
                     {% csrf_token %} {{form.as_p}}
-                    <button type="submit" class="btn btn-dark">Create Account</button>
+                    <button type="submit" class="btn btn-dark">Register Account</button>
                 </form>
             </div>
         </div>
