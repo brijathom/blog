@@ -34,8 +34,6 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'blog-app-bt.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'users',
-    'entries',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'users',
+    'entries',
 ]
 
 MIDDLEWARE = [
