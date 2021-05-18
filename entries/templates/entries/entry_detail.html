@@ -10,7 +10,8 @@
         </div>
         <div class="card-footer text-muted">
             <strong>{{ entry.entry_author }}</strong>
-            {{ entry.entry_date }} {% if user.is_authenticated and user.id == entry.entry_author_id %} - <a href="{% url 'update_entry' entry.pk %}">Edit</a> -
+            - {{ entry.entry_date }} {% if user.is_authenticated and user.id == entry.entry_author_id %} -
+            <a href="{% url 'update_entry' entry.pk %}">Edit</a> -
             <a href="{% url 'delete_entry' entry.pk %}">Delete</a>
             {% endif %}
         </div>
